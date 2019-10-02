@@ -38,8 +38,9 @@ class Test1():
     self.driver.get('https://www.youtube.com/playlist?list=PLpC8pNAHN_NLqT0TExv76jMTdhpQ72hCO') # custom playlist
     time.sleep(1)
     self.driver.find_element(By.XPATH, '//*[@id="thumbnail"]').click() # click on the first video
+    time.sleep(5)
 
-    title = self.driver.find_element(By.XPATH, '//*[@id="container"]/h1/yt-formatted-string').text
+    title = self.driver.title
     # num_comments = self.driver.find_element(By.XPATH, '//*[@id="count"]/yt-formatted-string').text 
     #num_likes = self.driver.find_element(By.XPATH, '//*[@id="text"]').text 
     #num_dislikes = self.driver.find_element(By.XPATH, '//*[@id="text"]').text
